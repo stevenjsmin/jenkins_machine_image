@@ -4,16 +4,17 @@
     "secret_key": "{{env `GB_AWS_PACKER_SECRET_KEY`}}",
     "region": "{{env `GB_AWS_REGION`}}",
     "source_ami": "{{env `GB_AWS_SOURCE_AMI`}}",
-    "instance_type": "{{env `GB_AWS_INSTANCE_TYPE`}}"
+    "instance_type": "{{env `GB_AWS_INSTANCE_TYPE`}}",
+    "ssh_username": "{{env `SSH_USERNAME`}}"
   },
   "builders": [{
     "type": "amazon-ebs",
     "access_key": "{{user `access_key`}}",
     "secret_key": "{{user `secret_key`}}",
-    "region": "ap-southeast-2",
-    "source_ami": "ami-dd8d66bf",
-    "instance_type": "t2.micro",
-    "ssh_username": "ec2-user",
+    "region": "{{user `region`}}",
+    "source_ami": "{{user `source_ami`}}",
+    "instance_type": "{{user `instance_type`}}",
+    "ssh_username": "{{user `ssh_username`}}",
     "ami_name": "packer-example {{timestamp}}"
   }]
 }
