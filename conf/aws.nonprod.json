@@ -1,6 +1,4 @@
 {
-  "access_key": "{{env `GB_AWS_PACKER_ACCESS_KEY`}}",
-  "secret_key": "{{env `GB_AWS_PACKER_SECRET_KEY`}}",
   "region": "ap-southeast-2",
   "source_ami": "ami-dd8d66bf",
   "instance_type": "t2.micro",
