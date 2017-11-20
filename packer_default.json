@@ -16,8 +16,11 @@
   "provisioners" : [
     {
       "type": "shell",
-      "inline": ["sudo yum install vim -y"]
-
+      "inline": [
+          "sleep 30",
+          "sudo yum update -y",
+          "sudo yum install git -y"
+      ]
     }
   ]
 }
