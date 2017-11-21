@@ -2,7 +2,7 @@
   "variables": {
     "access_key": "{{env `GB_AWS_PACKER_ACCESS_KEY`}}",
     "secret_key": "{{env `GB_AWS_PACKER_SECRET_KEY`}}",
-    "region": "ap-southeast-2",
+    "region": "",
     "source_ami": "",
     "instance_type": "",
     "ssh_username": "",
