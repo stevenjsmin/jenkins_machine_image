@@ -29,7 +29,7 @@
     },
     {
       "type": "shell-local",
-      "command": "mkdir /local/tomcat; mkdir /local/maven"
+      "command": "mkdir -p /local/tomcat;mkdir -p /local/maven"
     },
     {
       "type": "shell-local",
