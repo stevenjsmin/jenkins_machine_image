@@ -29,11 +29,11 @@
     },
     {
       "type": "shell-local",
-      "command": "mkdir -p /local/tomcat;mkdir -p /local/maven"
+      "command": "mkdir -p /local/download;mkdir -p /local/temp"
     },
     {
       "type": "shell-local",
-      "command": "wget -O /local/apache-tomcat-8.5.23.tar.gz http://mirror.intergrid.com.au/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz"
+      "command": "wget -P /local/download/ -O apache-tomcat-8.5.23.tar.gz http://mirror.intergrid.com.au/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz"
     }
   ]
 }
