@@ -26,16 +26,13 @@
           "sudo yum update -y",
           "sudo yum install git -y",
           "sudo mkdir -p /local/download;sudo mkdir -p /local/temp",
-          "sudo wget -P /local/download/ -O apache-tomcat-8.5.23.tar.gz http://mirror.intergrid.com.au/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz"
+          "sudo curl -o /local/download/apache-tomcat-8.5.23.tar.gz http://mirror.intergrid.com.au/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz",
+          "sudo curl -o /local/download/apache-maven-3.5.2-bin.tar.gz http://www-eu.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz"
       ]
     },
     {
       "type": "shell-local",
-      "command": "sudo mkdir -p /local/download;sudo mkdir -p /local/temp"
-    },
-    {
-      "type": "shell-local",
-      "command": "sudo wget -P /local/download/ -O apache-tomcat-8.5.23.tar.gz http://mirror.intergrid.com.au/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz"
+      "command": "sudo echo 'This is shell execution on the local'"
     }
   ]
 }
