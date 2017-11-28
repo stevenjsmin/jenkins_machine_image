@@ -3,7 +3,7 @@
 ec2:
   region: ap-southeast-2
   credentials: steven
-  image: ami-fbd73d99
+  image: ami-c1e114a3
   sg: sg-87b7c3e1
   instance_type: t2.micro
   subnet: subnet-b37ccfd6
