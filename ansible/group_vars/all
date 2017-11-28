@@ -1,13 +1,13 @@
 # EC2 instance variable
 
 ec2:
-  region: ap-southeast-2
-  credentials: steven
-  image: ami-c1e114a3
-  sg: sg-87b7c3e1
+  region:        ap-southeast-2
+  credentials:   steven
+  image:         ami-c1e114a3
+  sg:            sg-87b7c3e1
   instance_type: t2.micro
-  subnet: subnet-b37ccfd6
-  public_ip: yes
+  subnet:        subnet-b37ccfd6
+  public_ip:     yes
   tags:
     Name: Ec2Ansible
   volumes:
