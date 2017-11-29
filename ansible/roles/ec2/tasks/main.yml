@@ -8,7 +8,7 @@
     image: "{{ ec2.image }}"
     instance_type: "{{ ec2.instance_type }}"
     instance_profile_name: "{{ ec2.role | default('') }}"
-    group: "{{ ec2.sg }}"
+    group_id: "{{ ec2.sg_id }}"
     vpc_subnet_id: "{{ ec2.subnet }}"
     assign_public_ip: "{{ ec2.public_ip | default('no') }}"
     private_ip: "{{ ec2.private_ip | default('') }}"
