@@ -13,9 +13,3 @@
     assign_public_ip: "{{ ec2.public_ip | default('no') }}"
     private_ip: "{{ ec2.private_ip | default('') }}"
     wait: true
-    instance_tags: |
-          {
-              "Name":"{{ ec2.tags.name }}",
-              "Type":"{{ ec2.tags.type }}",
-              "Environment":"{{ ec2.tags.env }}"
-          }
