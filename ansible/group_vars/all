@@ -10,8 +10,8 @@ ec2:
   public_ip:     yes
   tags:
     Name: Sample Bake Instance
-    Type: t2.micro
-    Env: Development
+    Type: t2-micro
+    Env: Dev
   volumes:
     - device_name: /dev/xvda
       volume_type: standard

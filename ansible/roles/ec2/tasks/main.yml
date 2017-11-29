@@ -4,7 +4,6 @@
   ec2:
     region: "{{ ec2.region }}"
     keypair: "{{ ec2.credentials }}"
-    instance_tags: "{{ ec2.tags }}"
     image: "{{ ec2.image }}"
     instance_type: "{{ ec2.instance_type }}"
     instance_profile_name: "{{ ec2.role | default('') }}"
@@ -13,3 +12,10 @@
     assign_public_ip: "{{ ec2.public_ip | default('no') }}"
     private_ip: "{{ ec2.private_ip | default('') }}"
     wait: true
+    instance_tags: |
+          {
+              "Name":"{{ ec2.tags.Name }}",
+              "Type":"{{ ec2.tags.Type }}",
+              "Environment":"{{ ec2.tags.Env }}"
+          }
+
