@@ -9,6 +9,8 @@
     region: "ap-southeast-2"
     disable_rollback: false
     template: "{{playbook_dir}}/roles/ec2-cf/files/ec2.yml"
+    template_parameters:
+      Subnets: "{{ ec2.subnet }}"
     tags:
       InfraCodeVersion: "1111"
       Environment: "222"
