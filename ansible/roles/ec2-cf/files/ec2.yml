@@ -6,7 +6,7 @@ Resources:
     Properties:
       ImageId: "ami-c1e114a3"
       KeyName: "steven"
-      SecurityGroups: "sg-87b7c3e1"
+      SecurityGroups: ["sg-87b7c3e1"]
       BlockDeviceMappings:
         - DeviceName: "/dev/sdm"
           Ebs:
