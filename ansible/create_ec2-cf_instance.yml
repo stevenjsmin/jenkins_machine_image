@@ -1,5 +1,5 @@
 # Instance creation
-# Run : ansible-playbook -i env/hosts create_ec2_instance.yml
+# Run : ansible-playbook -vvv -i ansible/env/hosts -e env_type=nonprod ansible/create_ec2-cf_instance.yml
 - hosts: localhost
   connection: local
   pre_tasks:
