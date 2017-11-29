@@ -9,9 +9,9 @@ ec2:
   subnet:        subnet-b37ccfd6
   public_ip:     yes
   tags:
-    name: Sample Bake Instance
-    type: t2
-    env: Development
+    Name: Sample Bake Instance
+    Type: t2.micro
+    Env: Development
   volumes:
     - device_name: /dev/xvda
       volume_type: standard
