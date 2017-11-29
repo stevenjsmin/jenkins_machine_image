@@ -15,7 +15,7 @@
     wait: true
     instance_tags: |
           {
-              "Name":"hello1",
-              "Type":"hello2",
-              "Environment":"hello3"
+              "Name":"{{ ec2.tags.name }}",
+              "Type":"{{ ec2.tags.type }}",
+              "Environment":"{{ ec2.tags.env }}"
           }
