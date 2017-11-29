@@ -14,7 +14,7 @@
     private_ip: "{{ ec2.private_ip | default('') }}"
     wait: true,
     instance_tags: |
-      '{ "Name":"hello1",
+      { "Name":"hello1",
          "Type":"hello2",
          "Environment":"hello3"
-       }'
+      }
