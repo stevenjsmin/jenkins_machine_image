@@ -18,4 +18,4 @@
               "Type":"{{ ec2.tags.Type }}",
               "Environment":"{{ ec2.tags.Env }}"
           }
-
+  register: ec2
