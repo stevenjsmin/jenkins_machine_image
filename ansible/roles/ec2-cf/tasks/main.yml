@@ -1,0 +1,19 @@
+#
+# Create EC2 instance by CloudFormation
+- name: Create EC2 Stack using Cloudformation
+  cloudformation:
+    aws_access_key: "AKIAJWONYF2243COGQHQ"
+    aws_secret_key: "ASm90EddbN+ZeOu7s8VxC/2zcR9OMDYH6g/MyiYy"
+    stack_name: "Sample EC2 Stack"
+    state: "present"
+    region: "ap-southeast-2"
+    disable_rollback: false
+    template: "{{playbook_dir}}/roles/ec2-cf/files/ec2.yml"
+    template_parameters:
+      Subnets: "{{ ec2.subnet }}"
+    tags:
+      InfraCodeVersion: "1111"
+      Environment: "222"
+      Colour: "Blue"
+      Stack: "333"
+  register: stack
