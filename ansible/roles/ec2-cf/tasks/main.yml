@@ -4,7 +4,7 @@
   cloudformation:
     aws_access_key: "AKIAJWONYF2243COGQHQ"
     aws_secret_key: "ASm90EddbN+ZeOu7s8VxC/2zcR9OMDYH6g/MyiYy"
-    stack_name: "Sample EC2 Stack"
+    stack_name: "SampleEC2Stack"
     state: "present"
     region: "ap-southeast-2"
     disable_rollback: false
