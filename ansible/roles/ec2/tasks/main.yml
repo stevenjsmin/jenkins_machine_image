@@ -12,5 +12,5 @@
     vpc_subnet_id: "{{ ec2.subnet }}"
     assign_public_ip: "{{ ec2.public_ip | default('no') }}"
     private_ip: "{{ ec2.private_ip | default('') }}"
-    wait: true,
+    wait: true
     instance_tags: '{ "Name":"hello1","Type":"hello2","Environment":"hello3"}'
