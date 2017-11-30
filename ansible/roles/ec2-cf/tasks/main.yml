@@ -2,8 +2,6 @@
 # Create EC2 instance by CloudFormation
 - name: Create EC2 Stack using Cloudformation
   cloudformation:
-    aws_access_key: "AKIAJWONYF2243COGQHQ"
-    aws_secret_key: "ASm90EddbN+ZeOu7s8VxC/2zcR9OMDYH6g/MyiYy"
     stack_name: "SampleEC2Stack"
     state: "present"
     region: "ap-southeast-2"
