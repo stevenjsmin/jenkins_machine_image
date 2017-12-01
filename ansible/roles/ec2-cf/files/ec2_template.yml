@@ -6,8 +6,11 @@ Parameters:
     Type: String
   InstanceType:
     Type: String
-  SecurityGroup:
-    Type: "List<AWS::EC2::SecurityGroup::Id>"
+  SecurityGroup: {
+      "Description": "Security groups that can be used to access the EC2 instances",
+      "Type": "List<AWS::EC2::SecurityGroup::Id>",
+      "ConstraintDescription": "Must be list of EC2 security group ids"
+  }
 
 
 Resources:
