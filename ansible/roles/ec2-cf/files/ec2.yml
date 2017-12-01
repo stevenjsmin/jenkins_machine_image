@@ -8,7 +8,7 @@ Resources:
       KeyName: "steven"
       SecurityGroupIds:
         - sg-87b7c3e1
-      InstanceType: "{{ instant_type }}"
+      InstanceType: "{{ instance_type }}"
       BlockDeviceMappings:
         - DeviceName: "/dev/sdm"
           Ebs:
