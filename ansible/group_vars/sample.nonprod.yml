@@ -19,7 +19,3 @@ ec2:
     - device_name: /dev/xvda
       volume_type: standard
       volume_size: 8
-  
-
-
-
