@@ -2,18 +2,19 @@
 # Create EC2 instance by CloudFormation
 - name: Create EC2 Stack using Cloudformation
   cloudformation:
-    stack_name: "{{ stack_name }}"
-    state: "present"
-    region: "ap-southeast-2"
+    stack_name: "{{ common.stack_name }}"
+    state: "{{ common.state}}"
+    region: "{{ common.region }}"
     disable_rollback: false
     template: "{{playbook_dir}}/roles/ec2-cf/files/ec2_template.yml"
     template_parameters:
-      AmiId : "{{ ami_id }}"
-      InstanceType: "{{ instance_type }}"
+      AmiId : "{{ ec2.ami_id }}"
+      InstanceType: "{{ ec2.instance_type }}"
+      KeyName: "{{ec2.key_pair}}"
       SecurityGroup:
         "sg-87b7c3e1, sg-e9acd88f"
     tags:
-      InfraCodeVersion: "{{ infra_version }}"
-      Environment: "{{ env_type }}"
-      Colour: "{{ colour }}"
+      InfraCodeVersion: "{{ common.infra_version }}"
+      Environment: "{{ common.env_type }}"
+      Colour: "{{ common.colour }}"
   register: stack
