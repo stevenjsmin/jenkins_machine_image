@@ -3,8 +3,8 @@
 - name: Create EC2 Stack using Cloudformation
   cloudformation:
     stack_name: "{{ stack_name }}"
-    state: "{{ common.state}}"
-    region: "{{ common.region }}"
+    state: "{{ state}}"
+    region: "{{ region }}"
     disable_rollback: false
     template: "{{playbook_dir}}/roles/ec2-cf/files/ec2_template.yml"
     template_parameters:
@@ -14,7 +14,7 @@
       SecurityGroup:
         "sg-87b7c3e1, sg-e9acd88f"
     tags:
-      InfraCodeVersion: "{{ common.infra_version }}"
-      Environment: "{{ common.env_type }}"
-      Colour: "{{ common.colour }}"
+      InfraCodeVersion: "{{ infra_version }}"
+      Environment: "{{ env_type }}"
+      Colour: "{{ colour }}"
   register: stack

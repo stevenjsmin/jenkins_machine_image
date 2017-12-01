@@ -6,7 +6,6 @@ common:
   state: "present"
   region: "ap-southeast-2"
   infra_version: "1.0"
-  env_type: "nonprod"
   colour: "blue"
 
 ec2:

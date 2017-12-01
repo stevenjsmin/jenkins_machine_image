@@ -2,8 +2,8 @@
 # Create EC2 instance
 - name: Create instances
   ec2:
-    region: "{{ common.region }}"
-    keypair: "{{ common.key_pair }}"
+    region: "{{ region }}"
+    keypair: "{{ ec2.key_pair }}"
     image: "{{ ec2.ami_id }}"
     instance_type: "{{ ec2.instance_type }}"
     instance_profile_name: "{{ ec2.iam_role | default('') }}"

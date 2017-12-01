@@ -1,13 +1,10 @@
 # EC2 instance variable
 
 stack_name: "test"
-
-common:
-  state: "present"
-  region: "ap-southeast-2"
-  infra_version: "1.0"
-  env_type: "nonprod"
-  colour: "blue"
+state: "present"
+region: "ap-southeast-2"
+infra_version: "1.0"
+colour: "blue"
 
 ec2:
   ami_id: "ami-e8c62d8a"
