@@ -12,6 +12,7 @@
       InstanceType: "{{ instance_type }}"
       SecurityGroup:
         sg-87b7c3e1
+        sg-e9acd88f
     tags:
       InfraCodeVersion: "{{ infra_version }}"
       Environment: "{{ env_type }}"
