@@ -1,22 +1,26 @@
 # EC2 instance variable
 
+common:
+  stack_name: "sample"
+  state: "present"
+  region: "ap-southeast-2"
+  infra_version: "1.0"
+  env_type: "nonprod"
+  colour: "blue"
+  key_pair: "steven"
+
 ec2:
-  region:        ap-southeast-2
-  credentials:   steven
-  image:         ami-c1e114a3
-  sg_id:         sg-87b7c3e1
-  instance_type: t2.medium
-  subnet:        subnet-b37ccfd6
-  public_ip:     yes
+  ami_id: "ami-e8c62d8a"
+  instance_type: "t2.micro"
+  iam_role: "TestAdminRole"
+  security_group_ids: "sg-87b7c3e1"
+  vpc_subnet_id: "subnet-b37ccfd6"
+  assign_public_ip: "yes"
   tags:
-    Name: Sample Bake Instance for prod
-    Type: t2-medium
-    Env: Prod
+    Name: "-"
+    Type: "-"
+    Env: "-"
   volumes:
     - device_name: /dev/xvda
       volume_type: standard
       volume_size: 8
-  
-
-
-
