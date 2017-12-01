@@ -9,8 +9,8 @@
     template: "{{playbook_dir}}/roles/ec2-cf/files/ec2_template.yml"
     template_format: yaml
     template_parameters:
-      AmiId : "{{ ami_id }}"
-      InstanceType: "{{ instance_type }}"
+      AmiId : "ami-6d2bde0f"
+      InstanceType: "t2.nano"
     tags:
       InfraCodeVersion: "{{ infra_version }}"
       Environment: "{{ env_type }}"
