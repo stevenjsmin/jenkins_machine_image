@@ -32,7 +32,7 @@ Resources:
       KeyName: !Ref KeyName
       SecurityGroupIds: !Ref SecurityGroup
       InstanceType: !Ref InstanceType
-      InstanceProfile: !Ref InstanceProfile
+      IamInstanceProfile: !Ref InstanceProfile
       BlockDeviceMappings:
         - DeviceName: "/dev/sdm"
           Ebs:
