@@ -12,11 +12,11 @@ Resources:
   MyEC2Instance:
     Type: "AWS::EC2::Instance"
     Properties:
-      ImageId: "{ Ref: AmiId }"
+      ImageId: !Ref AmiId
       KeyName: "steven"
       SecurityGroupIds:
         - sg-87b7c3e1
-      InstanceType: "{ Ref: InstanceType }"
+      InstanceType: !Ref InstanceType
       BlockDeviceMappings:
         - DeviceName: "/dev/sdm"
           Ebs:

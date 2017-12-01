@@ -7,10 +7,10 @@
     region: "ap-southeast-2"
     disable_rollback: false
     template: "{{playbook_dir}}/roles/ec2-cf/files/ec2_template.yml"
-    template_format: yaml
-    template_parameters:
-      AmiId : "ami-6d2bde0f"
-      InstanceType: "t2.nano"
+    args:
+      template_parameters:
+        AmiId : "ami-6d2bde0f"
+        InstanceType: "t2.nano"
     tags:
       InfraCodeVersion: "{{ infra_version }}"
       Environment: "{{ env_type }}"
