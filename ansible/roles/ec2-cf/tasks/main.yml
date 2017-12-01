@@ -11,7 +11,7 @@
       AmiId : "{{ ami_id }}"
       InstanceType: "{{ instance_type }}"
       SecurityGroup:
-        - sg-87b7c3e1
+        sg-87b7c3e1
     tags:
       InfraCodeVersion: "{{ infra_version }}"
       Environment: "{{ env_type }}"
