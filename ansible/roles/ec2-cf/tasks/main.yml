@@ -8,8 +8,8 @@
     disable_rollback: false
     template: "{{playbook_dir}}/roles/ec2-cf/files/ec2_template.yml"
     template_parameters:
-      AmiId : "ami-6d2bde0f"
-      InstanceType: "t2.nano"
+      AmiId : "{{ ami_id }}"
+      InstanceType: "{{ instance_type }}"
     tags:
       InfraCodeVersion: "{{ infra_version }}"
       Environment: "{{ env_type }}"
