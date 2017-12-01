@@ -7,6 +7,7 @@
     region: "ap-southeast-2"
     disable_rollback: false
     template: "{{playbook_dir}}/roles/ec2-cf/files/ec2_template.yml"
+    template_format: yaml
     template_parameters:
       amiId : "{{ ami_id }}"
       instanceType: "{{ instance_type }}"
