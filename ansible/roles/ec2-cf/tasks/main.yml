@@ -8,7 +8,8 @@
     disable_rollback: false
     template: "{{playbook_dir}}/roles/ec2-cf/files/ec2_template.yml"
     template_parameters:
-      AmiId : "{{ ec2.ami_id }}"
+      InstanceProfile: "{{ ec2.iam_role }}"
+      AmiId: "{{ ec2.ami_id }}"
       InstanceType: "{{ ec2.instance_type }}"
       KeyName: "{{ec2.key_pair}}"
       SecurityGroup:

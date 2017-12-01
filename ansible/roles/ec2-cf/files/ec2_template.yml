@@ -17,6 +17,11 @@ Parameters:
       "Type": "List<AWS::EC2::SecurityGroup::Id>",
       "ConstraintDescription": "Must be list of EC2 security group ids"
   }
+  InstanceProfile: {
+      "Description": "Server role",
+      "Type": "AWS::IAM::InstanceProfile",
+      "ConstraintDescription": "Must be list of AMI role"
+  }
 
 
 Resources:
@@ -27,6 +32,7 @@ Resources:
       KeyName: !Ref KeyName
       SecurityGroupIds: !Ref SecurityGroup
       InstanceType: !Ref InstanceType
+      InstanceProfile: !Ref InstanceProfile
       BlockDeviceMappings:
         - DeviceName: "/dev/sdm"
           Ebs:
