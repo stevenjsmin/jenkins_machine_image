@@ -1,17 +1,18 @@
 # EC2 instance variable
 
+stack_name: "test"
+
 common:
-  stack_name: "sample"
   state: "present"
   region: "ap-southeast-2"
   infra_version: "1.0"
   env_type: "nonprod"
   colour: "blue"
-  key_pair: "steven"
 
 ec2:
   ami_id: "ami-e8c62d8a"
   instance_type: "t2.micro"
+  key_pair: "steven"
   iam_role: "TestAdminRole"
   security_group_ids: "sg-87b7c3e1"
   vpc_subnet_id: "subnet-b37ccfd6"
