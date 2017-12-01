@@ -6,7 +6,10 @@
     state: "present"
     region: "ap-southeast-2"
     disable_rollback: false
-    template: "{{playbook_dir}}/roles/ec2-cf/files/ec2.yml"
+    template: "{{playbook_dir}}/roles/ec2-cf/files/ec2_template.yml"
+    Parameters
+      amiId : "{{ ami_id }}"
+      instanceType: "{{ instance_type }}"
     tags:
       InfraCodeVersion: "{{ infra_version }}"
       Environment: "{{ env_type }}"
