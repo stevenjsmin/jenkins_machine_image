@@ -4,7 +4,7 @@ Resources:
   MyEC2Instance:
     Type: "AWS::EC2::Instance"
     Properties:
-      ImageId: "{{ ami_id }}"
+      ImageId: "{{ image }}"
       KeyName: "steven"
       SecurityGroupIds:
         - sg-87b7c3e1
