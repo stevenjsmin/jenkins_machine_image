@@ -4,10 +4,11 @@ Resources:
   MyEC2Instance:
     Type: "AWS::EC2::Instance"
     Properties:
-      ImageId: "ami-c1e114a3"
+      ImageId: "{{ ami_id }}"
       KeyName: "steven"
       SecurityGroupIds:
         - sg-87b7c3e1
+      InstanceType: "{{ instant_type }}"
       BlockDeviceMappings:
         - DeviceName: "/dev/sdm"
           Ebs:
