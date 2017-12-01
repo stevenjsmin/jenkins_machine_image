@@ -1,14 +1,22 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: "Ec2 block device mapping"
+
+Parameters:
+  AmiId:
+    Type: String
+  InstanceType:
+    Type: String
+
+
 Resources:
   MyEC2Instance:
     Type: "AWS::EC2::Instance"
     Properties:
-      ImageId: "{{ amiId }}"
+      ImageId: "{ Ref: AmiId }"
       KeyName: "steven"
       SecurityGroupIds:
         - sg-87b7c3e1
-      InstanceType: "{{ instanceType }}"
+      InstanceType: "{ Ref: InstanceType }"
       BlockDeviceMappings:
         - DeviceName: "/dev/sdm"
           Ebs:
