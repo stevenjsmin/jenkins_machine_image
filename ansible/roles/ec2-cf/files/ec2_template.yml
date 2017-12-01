@@ -19,7 +19,7 @@ Parameters:
   }
   InstanceProfile: {
       "Description": "Server role",
-      "Type": "AWS::IAM::InstanceProfile",
+      "Type": "String",
       "ConstraintDescription": "Must be list of AMI role"
   }
 
