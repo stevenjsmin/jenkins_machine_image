@@ -1,6 +1,7 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: "Ec2 block device mapping"
 
+
 Parameters:
   AmiId:
     Type: String
