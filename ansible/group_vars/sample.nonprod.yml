@@ -1,5 +1,8 @@
 # EC2 instance variable
 
+instance_type: "t2.micro"
+ami_id: "ami-e8c62d8a"
+
 ec2:
   region:        ap-southeast-2
   credentials:   steven
