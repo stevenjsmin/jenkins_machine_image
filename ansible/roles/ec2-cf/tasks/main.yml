@@ -12,8 +12,7 @@
       AmiId: "{{ ec2.ami_id }}"
       InstanceType: "{{ ec2.instance_type }}"
       KeyName: "{{ec2.key_pair}}"
-      SecurityGroup:
-        "{{ ec2.security_groups }}"
+      SecurityGroup: "{{ ec2.security_groups }}"
     tags:
       InfraCodeVersion: "{{ infra_version }}"
       Environment: "{{ env_type }}"
