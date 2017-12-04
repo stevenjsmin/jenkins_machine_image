@@ -13,7 +13,7 @@
       InstanceType: "{{ ec2.instance_type }}"
       KeyName: "{{ec2.key_pair}}"
       SecurityGroup:
-        "sg-87b7c3e1, sg-e9acd88f"
+        "{{ ec2.security_groups }}"
     tags:
       InfraCodeVersion: "{{ infra_version }}"
       Environment: "{{ env_type }}"
