@@ -7,7 +7,7 @@
     image: "{{ ec2.ami_id }}"
     instance_type: "{{ ec2.instance_type }}"
     instance_profile_name: "{{ ec2.iam_role | default('') }}"
-    group_id: "{{ ec2.security_groups }}"
+    group_id: "{{ ec2.security_group_ids }}"
     vpc_subnet_id: "{{ ec2.vpc_subnet_id }}"
     assign_public_ip: "{{ ec2.assign_public_ip | default('no') }}"
     private_ip: "{{ ec2.private_ip | default('') }}"
