@@ -12,7 +12,7 @@ Parameters:
       "Type": "String",
       "ConstraintDescription": "Must be list of EC2 security group ids"
   }
-  SecurityGroup1: {
+  SecurityGroup: {
       "Description": "Security groups that can be used to access the EC2 instances",
       "Type": "List<AWS::EC2::SecurityGroup::Id>",
       "ConstraintDescription": "Must be list of EC2 security group ids"
@@ -30,7 +30,7 @@ Resources:
     Properties:
       ImageId: !Ref AmiId
       KeyName: !Ref KeyName
-      SecurityGroupIds: !Ref SecurityGroup1
+      SecurityGroupIds: !Ref SecurityGroup
       InstanceType: !Ref InstanceType
       IamInstanceProfile: !Ref InstanceProfile
       BlockDeviceMappings:
