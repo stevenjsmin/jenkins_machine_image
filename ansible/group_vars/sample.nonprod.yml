@@ -11,15 +11,14 @@ ec2:
   instance_type: "t2.micro"
   key_pair: "steven"
   iam_role: "TestAdminRole"
-  security_group_ids: "sg-87b7c3e1"
   vpc_subnet_id: "subnet-b37ccfd6"
   security_groups:
     "sg-87b7c3e1, sg-e9acd88f"
   assign_public_ip: "yes"
   tags:
-    Name: "-"
-    Type: "-"
-    Env: "-"
+    Name: "1"
+    Type: "2"
+    Env: "3"
   volumes:
     - device_name: /dev/xvda
       volume_type: standard
