@@ -13,12 +13,12 @@ ec2:
   iam_role: "TestAdminRole"
   vpc_subnet_id: "subnet-b37ccfd6"
   security_groups:
-    "sg-87b7c3e1"
+    "sg-87b7c3e1, sg-e9acd88f"
   assign_public_ip: "yes"
   tags:
-    Name: "11"
-    Type: "Prod"
-    Env: "32"
+    Name: "1"
+    Type: "2"
+    Env: "3"
   volumes:
     - device_name: /dev/xvda
       volume_type: standard
