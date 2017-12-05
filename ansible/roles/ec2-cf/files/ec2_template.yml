@@ -1,7 +1,6 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: "Ec2 block device mapping"
 
-
 Parameters:
   AmiId:
     Type: "String"
@@ -22,7 +21,6 @@ Parameters:
       "Type": "String",
       "ConstraintDescription": "Must be list of AMI role"
   }
-
 
 Resources:
   MyEC2Instance:
