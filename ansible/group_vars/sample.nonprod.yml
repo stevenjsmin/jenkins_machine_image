@@ -15,10 +15,6 @@ ec2:
   vpc_subnet_id: "subnet-b37ccfd6"
   security_groups: "sg-87b7c3e1, sg-e9acd88f"
   assign_public_ip: "yes"
-  tags:
-    Name: "-"
-    Type: "-"
-    Env: "-"
   volumes:
     - device_name: /dev/xvda
       volume_type: standard
