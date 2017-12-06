@@ -3,5 +3,6 @@
   "source_ami": "ami-c1e114a3",
   "instance_type": "t2.micro",
   "ssh_username": "ec2-user"
+  "test": "test"
 }
 
