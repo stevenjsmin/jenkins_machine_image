@@ -17,7 +17,7 @@ ec2:
     - "sg-e4150b9d"
   assign_public_ip: "yes"
   tags:
-    Name: "APM TEST"
+    Name: "Appian"
     Type: "Application"
     Env: "TEST"
   volumes:
