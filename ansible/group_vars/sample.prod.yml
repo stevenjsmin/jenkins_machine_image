@@ -14,8 +14,7 @@ ec2:
   key_pair: "steven"
   iam_role: "TestAdminRole"
   vpc_subnet_id: "subnet-b37ccfd6"
-  security_groups:
-    "sg-87b7c3e1, sg-e9acd88f"
+  security_groups: "sg-87b7c3e1, sg-e9acd88f"
   security_group_ids:
     - "sg-87b7c3e1"
     - "sg-e9acd88f"
