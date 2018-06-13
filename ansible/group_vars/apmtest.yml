@@ -27,4 +27,4 @@ ec2:
       volume_size: 8
   register: ec2_instance
 
-register: ec2_instance
+debug: var=ec2_instance
