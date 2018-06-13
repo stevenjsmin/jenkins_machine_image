@@ -21,9 +21,6 @@ ec2:
     - device_name: /dev/xvda
       volume_type: standard
       volume_size: 8
-  register: ec2_instance
-
-debug: var=ec2_instance
 
 #- name: Register/de-register EC2 instances in ELB
 #  ec2_elb:
