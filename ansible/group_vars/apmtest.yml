@@ -8,7 +8,7 @@ infra_version: "1.0"
 # security_groups : for CF stack
 # security_group_ids : for non CF
 ec2:
-  ami_id: "ami-76dc0314"
+  ami_id: "ami-d4fc21b6"
   instance_type: "t2.large"
   key_pair: "steven"
   iam_role: "S3FullAccess"
