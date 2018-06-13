@@ -14,7 +14,7 @@ ec2:
   iam_role: "S3FullAccess"
   vpc_subnet_id: "subnet-b37ccfd6"
   security_group_ids:
-    - "sg-e4150b9d"
+    - "sg-38c4da41"
   assign_public_ip: "yes"
   tags:
     Name: "Appian"
