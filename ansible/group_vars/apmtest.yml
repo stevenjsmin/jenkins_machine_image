@@ -11,7 +11,7 @@ ec2:
   ami_id: "ami-f2df0090"
   instance_type: "t2.large"
   key_pair: "steven"
-  iam_role: "TestAdminRole"
+  iam_role: "S3FullAccess"
   vpc_subnet_id: "subnet-b37ccfd6"
   security_group_ids:
     - "sg-e4150b9d"
