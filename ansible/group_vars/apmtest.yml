@@ -20,6 +20,7 @@ ec2:
   tags:
     Name: "Appian"
     Type: "Application"
+    Env: "Test"
   volumes:
     - device_name: /dev/xvda
       volume_type: standard
