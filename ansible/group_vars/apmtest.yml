@@ -5,20 +5,30 @@ state: "present"
 region: "ap-southeast-2"
 infra_version: "1.0"
 
-ec2:
-  ami_id: "ami-fbc51a99"
-  instance_type: "t2.large"
-  key_pair: "steven"
-  iam_role: "S3FullAccess"
-  vpc_subnet_id: "subnet-b37ccfd6"
-  security_group_ids:
-    - "sg-38c4da41"
-  assign_public_ip: "yes"
-  tags:
-    Name: "Appian"
-    Type: "Application"
-    Env: "TEST"
-  volumes:
-    - device_name: /dev/xvda
-      volume_type: standard
-      volume_size: 8
+- name: Create EC2 Instance from Appian application base image
+  ec2:
+    ami_id: "ami-fbc51a99"
+    instance_type: "t2.large"
+    key_pair: "steven"
+    iam_role: "S3FullAccess"
+    vpc_subnet_id: "subnet-b37ccfd6"
+    security_group_ids:
+      - "sg-38c4da41"
+    assign_public_ip: "yes"
+    tags:
+      Name: "Appian"
+      Type: "Application"
+    volumes:
+      - device_name: /dev/xvda
+        volume_type: standard
+        volume_size: 8
+    register: ec2_instance
+
+- debug: var=ec2_instance
+
+#- name: Register/de-register EC2 instances in ELB
+#  ec2_elb:
+#    region="ap-southeast-2"
+#    ec2_elbs="appian"
+#    instance_id="xxxxx"
+#    state="present"
