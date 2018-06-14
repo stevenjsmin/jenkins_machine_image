@@ -1,6 +1,9 @@
 ---
 
-#
+# This playbook is for
+# - Create EC2 Instance
+# - Register the Instance on ELB
+
 # Create EC2 instance
 - name: Create an EC2 instance
   ec2:
