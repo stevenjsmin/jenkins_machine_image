@@ -27,9 +27,9 @@
   wait_for: host={{ item.public_dns_name }} port=22 delay=10 timeout=180 state=started
   with_items: ec2Instance.instances
 
-- name: Add server ip addresses to hosts group
-  add_host: hostname={{ item.public_ip }} groupname=launched
-  with_items: ec2Instance.instances
+#- name: Add server ip addresses to hosts group
+#  add_host: hostname={{ item.public_ip }} groupname=launched
+#  with_items: ec2Instance.instances
 
 
 - name: Add the ervers to the load balancer
