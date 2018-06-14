@@ -39,3 +39,4 @@
     ec2_elbs: appian
     state: present
     region: "{{ region }}"
+  ignore_errors: yes
