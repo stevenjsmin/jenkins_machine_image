@@ -20,6 +20,9 @@
           }
   register: ec2-instance
 
+- debug:
+    msg: "instance: {{ ec2-instance }}"
+
 - name: Wait for the servers to appear on the network
   wait_for: host={{ item.public_dns_name }} port=22 delay=10 timeout=180 state=started
   with_items: ec2-instance.tagged_instances
