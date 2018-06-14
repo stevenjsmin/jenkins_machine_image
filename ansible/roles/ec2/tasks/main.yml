@@ -1,3 +1,5 @@
+---
+
 #
 # Create EC2 instance
 - name: Create an EC2 instance
