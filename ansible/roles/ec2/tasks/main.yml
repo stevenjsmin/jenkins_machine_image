@@ -20,6 +20,7 @@
           }
   register: ec2Instance
 
+- debug: var=ec2Instance
 - debug: var=ec2Instance.instances
 - debug: var=ec2Instance.instances[0].id
 
