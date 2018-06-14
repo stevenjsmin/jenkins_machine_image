@@ -21,7 +21,7 @@
   register: ec2Instance
 
 - debug:
-    msg: "instance: {{ ec2Instance.instance }}"
+    msg: "instance: {{ ec2Instance.instances }}"
 
 #- name: Wait for the servers to appear on the network
 #  wait_for: host={{ item.public_dns_name }} port=22 delay=10 timeout=180 state=started
