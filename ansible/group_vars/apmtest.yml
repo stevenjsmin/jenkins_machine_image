@@ -9,7 +9,7 @@ colour: "blue"
 # security_groups : for CF stack
 # security_group_ids : for non CF
 ec2:
-  ami_id: "ami-9a0ad3f8"
+  ami_id: "{{ AWS_AMI_ID }}"
   instance_type: "t2.micro"
   key_pair: "steven"
   iam_role: "S3FullAccess"
