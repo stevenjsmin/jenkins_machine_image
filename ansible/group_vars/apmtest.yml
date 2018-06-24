@@ -18,9 +18,9 @@ ec2:
     - "sg-38c4da41"
   assign_public_ip: "yes"
   tags:
-    Name: "Appian"
+    Name: "Appian_{{ RUN_EVN_TYPE }}"
     Type: "Application"
-    Env: "Test"
+    Env: "{{ RUN_EVN_TYPE }}"
   volumes:
     - device_name: /dev/xvda
       volume_type: standard
