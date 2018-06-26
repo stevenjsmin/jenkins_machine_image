@@ -8,9 +8,13 @@ colour: "blue"
 
 # security_groups : for CF stack
 # security_group_ids : for non CF
+# t2.micro : 1 cpu, 1 G Mem
+# t2.small : 1 cpu, 2 G Mem
+# t2.medium : 2 cpu, 4 G Mem
+# t2.xlarge : 4 cpu, 16 G Mem
 ec2:
   ami_id: "{{ AWS_AMI_ID }}"
-  instance_type: "t2.micro"
+  instance_type: "t2.xlarge"
   key_pair: "steven"
   iam_role: "S3FullAccess"
   vpc_subnet_id: "subnet-b37ccfd6"
