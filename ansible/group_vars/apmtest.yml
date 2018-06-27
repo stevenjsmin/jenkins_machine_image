@@ -14,7 +14,7 @@ colour: "blue"
 # t2.xlarge : 4 cpu, 16 G Mem
 ec2:
   ami_id: "{{ AWS_AMI_ID }}"
-  instance_type: "t2.xlarge"
+  instance_type: "t2.micro"
   key_pair: "steven"
   iam_role: "S3FullAccess"
   vpc_subnet_id: "subnet-b37ccfd6"
