@@ -19,8 +19,8 @@
     "run_tags": {
       "Name": "Cooking Packer AMI Image",
       "exempted_date": "15/08/2018",
-      "nbn:applicationSource": "new",
-      "nbn:env:code": "np",
+      "nbn:applicationSource": "{{user `nbn:applicationSource`}}",
+      "nbn:env:code": "{{user `nbn:env:code`}}",
       "nbn:env:subcode": "dev1",
       "nbn:focalPoint:applicationId": "2079",
       "nbn:focalPoint:applicationName": "Payments Jenkins",

@@ -4,6 +4,8 @@
   "instance_type": "t2.micro",
   "ssh_username": "ec2-user",
 
-  "ami_name": "Appian CICD AMI"
+  "ami_name": "Appian CICD AMI",
+  "nbn:applicationSource": "new",
+  "nbn:env:code": "np"
 }
 
