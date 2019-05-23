@@ -15,7 +15,7 @@
     "source_ami": "{{user `source_ami`}}",
     "instance_type": "{{user `instance_type`}}",
     "ssh_username": "{{user `ssh_username`}}",
-    "ami_name": "{{user `ami_name`}}-{{timestamp}}",
+    "ami_name": "{{user `ami_name`}}-{{isotime \"2006-01-02\"}}",
     "run_tags": {
       "Name": "Cooking Packer AMI Image",
       "exempted_date": "{{user `exempted_date`}}",
