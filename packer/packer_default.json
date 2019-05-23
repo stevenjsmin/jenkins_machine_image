@@ -5,8 +5,7 @@
     "region": "",
     "source_ami": "",
     "instance_type": "",
-    "ssh_username": "",
-    "ami_name": ""
+    "ssh_username": ""
   },
   "builders": [{
     "type": "amazon-ebs",
@@ -17,6 +16,25 @@
     "instance_type": "{{user `instance_type`}}",
     "ssh_username": "{{user `ssh_username`}}",
     "ami_name": "{{user `ami_name`}}-{{timestamp}}",
+    "run_tags": {
+      "Name": "Cooking Packer AMI Image",
+      "exempted_date": "15/08/2018",
+      "nbn:applicationSource": "new",
+      "nbn:env:code": "np",
+      "nbn:env:subcode": "dev1",
+      "nbn:focalPoint:applicationId": "2079",
+      "nbn:focalPoint:applicationName": "Payments Jenkins",
+      "nbn:focalPoint:applicationShortName": "Jenkins",
+      "nbn:focalPoint:sdgCode": "208",
+      "nbn:focalPoint:sdgPlatformCode": "paym",
+      "nbn:focalPoint:sdgPlatformName": "Payments",
+      "nbn:focalPoint:systemTeamEmail": "BPM_Appian_CICD@nbnco.com.au",
+      "nbn:focalPoint:systemTeamLead": "Ourania Papadopoulos",
+      "nbn:focalPoint:systemTeamName": "Enterprise",
+      "nbn:operationalMode": "CM2",
+      "nbn:teamCode": "paym",
+      "state:scheduleName": "SydneyBusinessHoursX5"
+    },
     "tags": {
       "Name": "{{ user `ami_name` }}",
       "exempted_date": "15/08/2018",
