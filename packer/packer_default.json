@@ -15,7 +15,7 @@
     "source_ami": "{{user `source_ami`}}",
     "instance_type": "{{user `instance_type`}}",
     "ssh_username": "{{user `ssh_username`}}",
-    "ami_name": "{{user `ami_name`}}-{{isotime \"2006-01-02\"}}",
+    "ami_name": "{{user `ami_name`}}-{{isotime \"2006-01-02 03:04:05\"}}",
     "ssh_timeout": "5m",
     "vpc_id": "{{ user `vpc_id` }}",
     "subnet_id": "{{ user `subnet_id` }}",
