@@ -16,6 +16,11 @@
     "instance_type": "{{user `instance_type`}}",
     "ssh_username": "{{user `ssh_username`}}",
     "ami_name": "{{user `ami_name`}}-{{isotime \"2006-01-02\"}}",
+    "ssh_timeout": "5m",
+    "vpc_id": "{{ user `vpc_id` }}",
+    "subnet_id": "{{ user `subnet_id` }}",
+    "associate_public_ip_address" : false,
+    "ami_users": "{{ user `ami_users` }}",
     "run_tags": {
       "Name": "Cooking Packer AMI Image",
       "exempted_date": "{{user `exempted_date`}}",

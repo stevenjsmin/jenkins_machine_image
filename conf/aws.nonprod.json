@@ -4,6 +4,10 @@
   "instance_type": "t2.micro",
   "ssh_username": "ec2-user",
 
+  "vpc_id": "vpc-e973ac8c",
+  "subnet_id": "subnet-b37ccfd6",
+  "ami_users": "371698615055",
+
   "ami_name": "Appian CICD AMI",
 
   "exempted_date": "15/08/2018",
