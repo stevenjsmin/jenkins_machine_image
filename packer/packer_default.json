@@ -16,7 +16,28 @@
     "source_ami": "{{user `source_ami`}}",
     "instance_type": "{{user `instance_type`}}",
     "ssh_username": "{{user `ssh_username`}}",
-    "ami_name": "{{user `ami_name`}}-{{timestamp}}"
+    "ami_name": "{{user `ami_name`}}-{{timestamp}}",
+    "tags": {
+      "Name": "{{ user `ami_name` }}",
+      "exempted_date": "15/08/2018",
+      "nbn:applicationSource": "new",
+      "nbn:env:code": "np",
+      "nbn:env:subcode": "dev1",
+      "nbn:focalPoint:applicationId": "2079",
+      "nbn:focalPoint:applicationName": "Payments Jenkins",
+      "nbn:focalPoint:applicationShortName": "Jenkins",
+      "nbn:focalPoint:sdgCode": "208",
+      "nbn:focalPoint:sdgPlatformCode": "paym",
+      "nbn:focalPoint:sdgPlatformName": "Payments",
+      "nbn:focalPoint:systemTeamEmail": "BPM_Appian_CICD@nbnco.com.au",
+      "nbn:focalPoint:systemTeamLead": "Ourania Papadopoulos",
+      "nbn:focalPoint:systemTeamName": "Enterprise",
+      "nbn:operationalMode": "CM2",
+      "nbn:teamCode": "paym",
+      "nbn:ast:ownerName": "Ravi Rapolu",
+      "nbn:ast:ownerEmail": "ravirapolu@nbnco.com.au",
+      "nbn:ast:ownerMobile": "0449984788"
+    }
   }],
   "provisioners" : [
     {
@@ -26,7 +47,6 @@
           "sudo yum update -y",
           "sudo yum install git -y",
           "sudo mkdir -p /local/download;sudo mkdir -p /local/temp",
-          "sudo curl -o /local/download/apache-tomcat-8.5.23.tar.gz https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz",
           "sudo curl -o /local/download/apache-maven-3.5.2-bin.tar.gz https://archive.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz"
       ]
     },
