@@ -69,7 +69,7 @@
           "sleep 30",
           "sudo yum update -y",
           "sudo yum install git -y",
-          "sudo mkdir -p /local/download;sudo mkdir -p /local/temp",
+          "sudo mkdir -p /local/download;sudo mkdir -p /local/temp;sudo chmod -R 777 /local/temp",
           "sudo curl -o /local/download/apache-maven-3.5.2-bin.tar.gz https://archive.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz"
       ]
     },
