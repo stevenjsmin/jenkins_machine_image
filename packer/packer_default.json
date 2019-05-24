@@ -80,7 +80,7 @@
     {
       "type": "file",
       "source": "/root/temp/uploadTest.txt",
-      "destination": "/local/"
+      "destination": "/local/temp/"
     }
   ]
 }
