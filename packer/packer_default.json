@@ -76,6 +76,11 @@
     {
       "type": "shell-local",
       "command": "sudo echo 'This is shell execution on the local'"
+    },
+    {
+      "type": "file",
+      "source": "/root/temp/uploadTest.txt",
+      "destination": "/local/"
     }
   ]
 }
