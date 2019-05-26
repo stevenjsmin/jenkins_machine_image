@@ -30,6 +30,6 @@
   "nbn:ast:ownerEmail": "ravirapolu@nbnco.com.au",
   "nbn:ast:ownerMobile": "0449984788",
 
-  "provisioning_script_dir": "/root/.jenkins/workspace/jenkins_bake_ami_1/packer/provisioning.scripts"
+  "packer_root_dir": "/root/.jenkins/workspace/jenkins_bake_ami_1/packer"
 }
 

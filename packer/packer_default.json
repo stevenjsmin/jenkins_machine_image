@@ -79,11 +79,16 @@
       ]
     },
     {
+      "type": "file",
+      "source": "{{user `packer_root_dir`}}/cicd-tools",
+      "destination": "/home/ec2-user"
+    },
+    {
       "execute_command": "{{ .Vars }} sudo -S -E bash '{{.Path}}'",
       "type": "shell",
       "scripts": [
-        "/root/.jenkins/workspace/jenkins_bake_ami_1/packer/provisioning.scripts/setup-evironment.sh",
-        "/root/.jenkins/workspace/jenkins_bake_ami_1/packer/provisioning.scripts/install-cicd-tools.sh"
+        "{{user `packer_root_dir`}}/provisioning.scripts/setup-evironment.sh",
+        "{{user `packer_root_dir`}}/provisioning.scripts/install-cicd-tools.sh"
       ]
     }
   ]
