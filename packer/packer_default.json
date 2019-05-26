@@ -85,8 +85,8 @@
       "execute_command": "{{ .Vars }} sudo -S -E bash '{{.Path}}'",
       "type": "shell",
       "scripts": [
-        "~ec2-user/provisioning.scripts/setup-evironment.sh",
-        "~ec2-user/provisioning.scripts/install-cicd-tools"
+        "/home/ec2-user/provisioning.scripts/setup-evironment.sh",
+        "/home/ec2-user/provisioning.scripts/install-cicd-tools"
       ]
     }
   ]
