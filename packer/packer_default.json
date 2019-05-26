@@ -83,7 +83,7 @@
       "type": "shell",
       "scripts": [
         "/root/.jenkins/workspace/jenkins_bake_ami_1/packer/provisioning.scripts/setup-evironment.sh",
-        "/root/.jenkins/workspace/jenkins_bake_ami_1/packer/provisioning.scripts/install-cicd-tools"
+        "/root/.jenkins/workspace/jenkins_bake_ami_1/packer/provisioning.scripts/install-cicd-tools.sh"
       ]
     }
   ]
