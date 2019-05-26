@@ -80,7 +80,7 @@
     },
     {
       "type": "file",
-      "source": "{{user `access_key`}}",
+      "source": "{{user `provisioning_script_dir`}}",
       "destination": "/home/ec2-user/provisioning"
     }
   ]
