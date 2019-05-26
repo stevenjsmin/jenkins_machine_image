@@ -73,20 +73,17 @@
           "sudo adduser -m jenkins",
           "sudo mkdir ~jenkins/.ssh",
           "sudo cp /home/ec2-user/.ssh/authorized_keys /home/jenkins/.ssh/",
-          "sudo chown -R jenkins:jenkins /home/jenkins/.ssh"
+          "sudo chown -R jenkins:jenkins /home/jenkins/.ssh",
+
+          "sudo mkdir /home/ec2-user/provisioning.scripts;sudo chown -R ec2-user:ec2-user /home/ec2-user/provisioning.scripts"
       ]
-    },
-    {
-      "type": "file",
-      "source": "{{user `provisioning_script_dir`}}",
-      "destination": "/home/ec2-user"
     },
     {
       "execute_command": "{{ .Vars }} sudo -S -E bash '{{.Path}}'",
       "type": "shell",
       "scripts": [
-        "/home/ec2-user/provisioning.scripts/setup-evironment.sh",
-        "/home/ec2-user/provisioning.scripts/install-cicd-tools"
+        "/root/.jenkins/workspace/jenkins_bake_ami_1/packer/provisioning.scripts/setup-evironment.sh",
+        "/root/.jenkins/workspace/jenkins_bake_ami_1/packer/provisioning.scripts/install-cicd-tools"
       ]
     }
   ]
