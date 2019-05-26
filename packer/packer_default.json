@@ -73,15 +73,20 @@
           "sudo adduser -m jenkins",
           "sudo mkdir ~jenkins/.ssh",
           "sudo cp /home/ec2-user/.ssh/authorized_keys /home/jenkins/.ssh/",
-          "sudo chown -R jenkins:jenkins /home/jenkins/.ssh",
-
-          "sudo mkdir -p /home/ec2-user/provisioning;sudo chown ec2-user:ec2-user /home/ec2-user/provisioning"
+          "sudo chown -R jenkins:jenkins /home/jenkins/.ssh"
       ]
     },
     {
       "type": "file",
       "source": "{{user `provisioning_script_dir`}}",
-      "destination": "/home/ec2-user/provisioning"
+      "destination": "/home/ec2-user"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "echo \"{{user `vault_secret`}}\" > /tmp/passwordExport",
+        "sudo chmod 755 -R jenkins:jenkins /home/ec2-user/provisioning.scripts"
+      ]
     }
   ]
 }
