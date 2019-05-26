@@ -69,18 +69,19 @@
           "sleep 30",
           "sudo yum update -y",
           "sudo yum install git -y",
-          "sudo mkdir -p /local/download;sudo mkdir -p /local/temp;sudo chmod -R 777 /local/temp",
-          "sudo curl -o /local/download/apache-maven-3.5.2-bin.tar.gz https://archive.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz"
+
+          "sudo adduser -m jenkins",
+          "sudo mkdir ~jenkins/.ssh",
+          "sudo cp /home/ec2-user/.ssh/authorized_keys /home/jenkins/.ssh/",
+          "sudo chown -R jenkins:jenkins /home/jenkins/.ssh",
+
+          "sudo mkdir -p /home/ec2-user/provisioning;sudo chown ec2-user:ec2-user /home/ec2-user/provisioning"
       ]
     },
     {
-      "type": "shell-local",
-      "command": "sudo echo 'This is shell execution on the local'"
-    },
-    {
       "type": "file",
-      "source": "/root/temp/uploadTest.txt",
-      "destination": "/local/temp/"
+      "source": "{{user `access_key`}}",
+      "destination": "/home/ec2-user/provisioning"
     }
   ]
 }
