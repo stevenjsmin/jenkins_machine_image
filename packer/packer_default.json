@@ -82,7 +82,6 @@
       "destination": "/home/ec2-user"
     },
     {
-      "execute_command": "{{ .Vars }} sudo -S -E bash '{{.Path}}'",
       "type": "shell",
       "scripts": [
         "/home/ec2-user/provisioning.scripts/setup-evironment.sh",
