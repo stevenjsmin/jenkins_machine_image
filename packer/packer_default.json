@@ -84,8 +84,8 @@
     {
       "type": "shell",
       "inline": [
-        "echo \"{{user `vault_secret`}}\" > /tmp/passwordExport",
-        "sudo chmod 755 -R jenkins:jenkins /home/ec2-user/provisioning.scripts"
+        "sudo /home/ec2-user/provisioning.scripts/setup-evironment.sh",
+        "sudo /home/ec2-user/provisioning.scripts/install-cicd-tools.sh"
       ]
     }
   ]
