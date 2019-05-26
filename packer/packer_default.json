@@ -80,13 +80,6 @@
       "type": "file",
       "source": "{{user `provisioning_script_dir`}}",
       "destination": "/home/ec2-user"
-    },
-    {
-      "type": "shell",
-      "inline": [
-        "sudo /home/ec2-user/provisioning.scripts/setup-evironment.sh",
-        "sudo /home/ec2-user/provisioning.scripts/install-cicd-tools.sh"
-      ]
     }
   ]
 }
