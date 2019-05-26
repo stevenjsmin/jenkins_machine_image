@@ -9,3 +9,6 @@
 cd /opt/
 
 tar xvfz cicd-tools-deploymentManager-20190521.tar.gz
+tar xvfz cicd-tools-fitnesse-20190521.tar.gz
+tar xvfz cicd-tools-java-20190521.tar.gz
+tar xvfz cicd-tools-jenkins-20190521.tar.gz
