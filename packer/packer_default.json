@@ -64,18 +64,22 @@
   }],
   "provisioners" : [
     {
+      "type": "shell-local",
+      "command": "curl -o cicd-tools-deploymentManager-20190527.tar.gz http://stevenmin.info/cicd-tools/cicd-tools-deploymentManager-20190527.tar.gz"
+    },
+    {
       "type": "shell",
       "inline": [
-          "sleep 30",
-          "sudo yum update -y",
-          "sudo yum install git -y",
+        "sleep 30",
+        "sudo yum update -y",
+        "sudo yum install git -y",
 
-          "sudo adduser -m jenkins",
-          "sudo mkdir ~jenkins/.ssh",
-          "sudo cp /home/ec2-user/.ssh/authorized_keys /home/jenkins/.ssh/",
-          "sudo chown -R jenkins:jenkins /home/jenkins/.ssh",
+        "sudo adduser -m jenkins",
+        "sudo mkdir ~jenkins/.ssh",
+        "sudo cp /home/ec2-user/.ssh/authorized_keys /home/jenkins/.ssh/",
+        "sudo chown -R jenkins:jenkins /home/jenkins/.ssh",
 
-          "sudo mkdir /home/ec2-user/provisioning.scripts;sudo chown -R ec2-user:ec2-user /home/ec2-user/provisioning.scripts"
+        "sudo mkdir /home/ec2-user/provisioning.scripts;sudo chown -R ec2-user:ec2-user /home/ec2-user/provisioning.scripts"
       ]
     },
     {
