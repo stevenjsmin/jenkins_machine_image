@@ -106,8 +106,8 @@
       "execute_command": "{{ .Vars }} sudo -S -E bash '{{.Path}}'",
       "type": "shell",
       "scripts": [
-        "{{user `packer_root_dir`}}/provisioning.scripts/setup-evironment.sh",
-        "{{user `packer_root_dir`}}/provisioning.scripts/install-cicd-tools.sh"
+        "{{user `packer_root_dir`}}/provisioning.scripts/install-cicd-tools.sh",
+        "{{user `packer_root_dir`}}/provisioning.scripts/setup-evironment.sh"
       ],
       "environment_vars": [
         "DB_RUL={{ user `database_url` }}"
