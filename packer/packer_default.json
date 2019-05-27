@@ -107,6 +107,9 @@
       "scripts": [
         "{{user `packer_root_dir`}}/provisioning.scripts/setup-evironment.sh",
         "{{user `packer_root_dir`}}/provisioning.scripts/install-cicd-tools.sh"
+      ],
+      "environment_vars": [
+        "DB_RUL={{ user `database_url` }}"
       ]
     }
   ]
