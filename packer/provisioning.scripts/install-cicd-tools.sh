@@ -8,3 +8,4 @@ sudo tar xvfz /home/ec2-user/cicd-tools/cicd-tools-jenkins-20190527.tar.gz -C /o
 
 # Install Web-Application for Appian CICD Portal
 sudo tar xvfz /home/ec2-user/cicd-tools/cicd-tools-wars-20190527.tar.gz -C /home/ec2-user
+

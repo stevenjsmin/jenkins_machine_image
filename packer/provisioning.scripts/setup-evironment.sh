@@ -1,5 +1,7 @@
 #! /bin/sh
 
-# TODO Scripting
+# Set Essencial environment variables
+sudo cp /home/ec2-user/cicd-tools/appianci.sh /etc/profile.d/
 
-# echo "Hello from setup-evironment.sh" > /home/ec2-user/provisioning.scripts/setup-evironment.txt
+# Set /etc/hosts
+sudo echo "198.18.2.228    yum.nbnnal.local" >> /etc/hosts
