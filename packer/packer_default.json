@@ -65,7 +65,7 @@
   "provisioners" : [
     {
       "type": "shell-local",
-      "command": "curl -o {{user `packer_root_dir`}}/cicd-tools/cicd-tools-deploymentManager-20190527.tar.gz http://stevenmin.info/cicd-tools/cicd-tools-deploymentManager-20190527.tar.gz"
+      "command": "curl -o {{user `packer_root_dir`}}/cicd-tools/cicd-tools-deploymentManager-20190527.tar.gz {{user `artifact_root_url`}}/cicd-tools-deploymentManager-20190527.tar.gz"
     },
     {
       "type": "shell",
