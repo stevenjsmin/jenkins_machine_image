@@ -77,9 +77,7 @@
         "sudo adduser -m jenkins",
         "sudo mkdir ~jenkins/.ssh",
         "sudo cp /home/ec2-user/.ssh/authorized_keys /home/jenkins/.ssh/",
-        "sudo chown -R jenkins:jenkins /home/jenkins/.ssh",
-
-        "sudo mkdir /home/ec2-user/provisioning.scripts;sudo chown -R ec2-user:ec2-user /home/ec2-user/provisioning.scripts"
+        "sudo chown -R jenkins:jenkins /home/jenkins/.ssh"
       ]
     },
     {
