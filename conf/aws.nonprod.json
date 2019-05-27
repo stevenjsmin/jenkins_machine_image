@@ -31,6 +31,12 @@
   "nbn:ast:ownerMobile": "0449984788",
 
   "packer_root_dir": "/root/.jenkins/workspace/jenkins_bake_ami_1/packer",
-  "artifact_root_url": "http://stevenmin.info/cicd-tools"
+  "artifact_root_url": "http://stevenmin.info/cicd-tools",
+
+  "cicd-tools-deploymentManager": "cicd-tools-deploymentManager-20190527.tar.gz",
+  "cicd-tools-fitnesse": "cicd-tools-fitnesse-20190527.tar.gz",
+  "cicd-tools-java": "cicd-tools-java-20190527.tar.gz",
+  "cicd-tools-jenkins": "cicd-tools-jenkins-20190527.tar.gz",
+  "cicd-tools-wars": "cicd-tools-wars-20190527.tar.gz"
 }
 
