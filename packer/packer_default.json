@@ -42,6 +42,7 @@
     },
     "tags": {
       "Name": "{{ user `ami_name` }}",
+      "Name": "Appian CICD Master",
       "exempted_date": "{{user `exempted_date`}}",
       "nbn:applicationSource": "{{user `nbn:applicationSource`}}",
       "nbn:env:code": "{{user `nbn:env:code`}}",
